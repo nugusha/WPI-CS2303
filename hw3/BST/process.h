@@ -1,13 +1,12 @@
 /*
- * process.h
+ *  process.h
  *
  *  Created on: Feb 2, 2017
- *      Author: djsully & nugusha
+ *      Author: Nugzar Chkhaidze & Danniel Sullivan
  */
 
 #ifndef PROCESS_H_
 #define PROCESS_H_
-
 
 char* final;
 int check(char c);
