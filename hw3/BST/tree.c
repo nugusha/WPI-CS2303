@@ -1,3 +1,10 @@
+/*
+ *  tree.c
+ *
+ *  Created on: Feb 2, 2017
+ *      Author: Nugzar Chkhaidze & Danniel Sullivan
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
