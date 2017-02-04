@@ -17,7 +17,6 @@ node* add(node *now,char *word){
 		now->node_word=strdup(word);
 		return now;
 	}
-
 	int cmp=compare(word,now->node_word);
 
 	if(cmp==0){
@@ -32,7 +31,6 @@ node* add(node *now,char *word){
 	}
 	return now;
 };
-
 void  print_words(node *now){
 	if(now==NULL)return;
 
@@ -42,11 +40,7 @@ void  print_words(node *now){
 
 	print_words(now->Right);
 };
-
 int compare(char *A,char *B){
-
-//	printf("%s %s\n",A,B);
-
 	int len1=strlen(A);
 	int len2=strlen(B);
 	int min_len=len1;
@@ -58,7 +52,6 @@ int compare(char *A,char *B){
 	}
 
 	if(len1==len2)return 0;
-
 	if(len1>len2)return 1;else
 		return -1;
 };
