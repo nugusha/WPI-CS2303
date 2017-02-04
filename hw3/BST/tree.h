@@ -1,8 +1,8 @@
 /*
- * tree.h
+ *  tree.h
  *
  *  Created on: Feb 2, 2017
- *      Author: djsully & nugusha
+ *      Author: Nugzar Chkhaidze & Danniel Sullivan
  */
 
 #ifndef TREE_H_
@@ -11,7 +11,6 @@
 
 int Total;
 struct bst_vertex{
-
 	int count;
 	char *node_word;
 
