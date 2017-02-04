@@ -1,3 +1,10 @@
+/*
+ *  makefile
+ *
+ *  Created on: Feb 2, 2017
+ *      Author: Nugzar Chkhaidze & Danniel Sullivan
+ */
+ 
 #makefile
 
 CFLAGS = -g
