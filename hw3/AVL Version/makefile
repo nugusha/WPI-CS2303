@@ -1,5 +1,9 @@
-#makefile
-
+#
+#  makefile
+#
+#  Created on: Feb 2, 2017
+#      Author: Nugzar Chkhaidze & Danniel Sullivan
+#
 CFLAGS = -g
 
 all: PA3
