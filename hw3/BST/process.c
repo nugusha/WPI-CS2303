@@ -20,10 +20,10 @@ int check(char c){
 			   ('A'<=c && c<='Z') ||
 			   ('0'<=c && c<='9'));
 }
-char* change(char* word){
+void change(char* word){
 	free(final);
 	int len=strlen(word);
-	if(len==0)return final;
+	if(len==0)return;
 	int counter1=-1,counter2=-1;
 
 	for(int i=0;i<len;i++){
@@ -40,14 +40,15 @@ char* change(char* word){
 	}
 	final=(char*)malloc((counter2-counter1+1)*sizeof(char));
 
-	if(counter1==-1 || counter2==-1)return final;
+	if(counter1==-1 || counter2==-1){word[0]='\0';return;}
 	int n=0;
 
 	for(int i=counter1;i<=counter2;i++){
 				final[n++]=tolower(word[i]);
 		}
 	final[n]='\0';
-	return final;
+	for(int i=0;i<=n;i++)word[i]=final[i];
+	return;
 }
 void process(char ***words,int n,int *wordsize,FILE *out){
 	for(int i=0;i<n;i++){
@@ -59,7 +60,7 @@ void process(char ***words,int n,int *wordsize,FILE *out){
 	fprintf(out,"-------------\n");
 	fprintf(out,"%6d\t",unique_words);
 	fprintf(out,"Distinct words\n");
-	
+
 	fprintf(out,"%6d\t",Total);
 	fprintf(out,"Total words counted (including duplicates)\n");
 }
