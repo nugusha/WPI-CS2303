@@ -10,7 +10,7 @@
 
 char* final;
 int check(char c);
-char* change(char* word);
+void change(char* word);
 void process(char ***words,int n,int *wordsize,FILE *out);
 
 #endif /* PROCESS_H_ */
