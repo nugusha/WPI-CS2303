@@ -1,5 +1,5 @@
 /*
- *  BST.c
+ *  bst.c
  *
  *  Created on: Feb 2, 2017
  *      Author: Nugzar Chkhaidze & Danniel Sullivan
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 		in[i-2]=fopen(argv[i],"r");
 	}
 	char *word;
-	word=malloc(100*sizeof(char));
+	word=malloc(10000*sizeof(char));
 
 	char ***words=(char ***)malloc(sizeof(char**)*(argc-2));
 	int *wordsize=malloc(sizeof(int)*(argc-2));
@@ -31,9 +31,10 @@ int main(int argc, char *argv[]) {
 		while(1){
 			p=fscanf(in[i],"%s",word);
 			if(p!=1)break;
-			word=strdup(change(word));
-			if(strlen(word)>0)
-				counter++,Total++;
+			change(word);
+
+			if(word[0]!='\0')
+				{counter++;Total++;}
 		}
 		words[i]=(char **)malloc(sizeof(char*)*counter);
 		wordsize[i]=counter;
@@ -46,8 +47,8 @@ int main(int argc, char *argv[]) {
 
 			if(p!=1)break;
 
-			word=strdup(change(word));
-			if(strlen(word)==0)continue;
+			change(word);
+			if(word[0]=='\0')continue;
 
 			N++;
 			words[i][N-1] = strdup(word);
