@@ -11,15 +11,28 @@
 #include<queue>
 
 #include "event.h"
-#include "teller.h"
-#include "customer.h"
-
 
 
 void EventQueue::getnew(){
 	Event *now=thequeue.top();
+	thequeue.pop();
 
 	now->Action();
+}
+void EventQueue::getnew2(){
 
+	Event *now=thequeue.top();
+	thequeue.pop();
+
+	now->Action2();
+}
+Event* EventQueue::TOP(){
+	return thequeue.top();
+}
+void EventQueue::REMOVE(){
 	thequeue.pop();
 }
+void EventQueue::ADD(Event *a){
+	thequeue.push(a);
+}
+
