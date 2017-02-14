@@ -18,15 +18,18 @@ using namespace std;
 
 class Event{
 public:
+	int lineNumber;
 	Event(){}
-	virtual Event* addd ()
-	      { Event* sample;return (sample); }
+	virtual Event* add ()
+	      { return NULL; }
 	virtual int gettime ()
 	      { return (0); }
 	virtual int getidle()
 	      { return (0); }
 	virtual void Action ()
-	      { cout<<"!!"<<endl;return ; }
+	      {return ; }
+	virtual void Action2 ()
+	      {return ; }
 	virtual void addtimeto (int trans_time)
 	      { return ; }
 
@@ -38,7 +41,7 @@ public:
 struct cmp {
     bool operator()(Event *a, Event *b)
     {
-        return (a->gettime()<b->gettime());
+        return (a->gettime()>b->gettime());
     }
 };
 
@@ -47,8 +50,13 @@ public:
 	std::priority_queue<Event *,std::vector<Event *>,cmp> thequeue;
 	EventQueue(){}
 	void getnew();
+	void getnew2();
+	Event* TOP();
+	void REMOVE();
+	void ADD(Event *a);
 
 };
+
 
 
 #endif /* EVENT_H_ */
