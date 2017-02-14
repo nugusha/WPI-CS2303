@@ -17,11 +17,12 @@ public:
 		time=t;
 	}
 	void Action();
+	void Action2();
 	int gettime();
-	Event* addd();
+	Event* add();
 
 
-	virtual ~Customer(){};
+	virtual ~Customer(){}
 };
 
 
