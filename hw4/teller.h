@@ -21,23 +21,22 @@ public:
 			idle_time=idle_t;
 		}
 
+	void process_transaction(int line_number);
 	void Action();
+	void Action2();
 	void addtimeto(int trans_time);
 	int getidle();
 	int gettime();
-	Event* addd();
+	Event* add();
+
 
 
 	virtual ~Teller(){}
 };
 
-class TellerQueue{
+class TellerQueue: public EventQueue{
 public:
-	std::priority_queue<Event *,std::vector<Event *>,cmp> thequeue;
 	TellerQueue(){}
-	Event* TOP();
-	void REMOVE();
-	void ADD(Event *a);
 };
 
 
