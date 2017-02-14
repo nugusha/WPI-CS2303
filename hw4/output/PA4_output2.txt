@@ -1,0 +1,20 @@
+Simulation time  - 10000
+Transaction time between           1 - 500
+Idle time between                  1 - 600
+Customers and Tellers            100 - 4
+
+
+
+Simulation with one line
+
+Average transaction time                       240.93
+Total idle time - Times_idle                    15443 47
+Total time -  Average waiting time              31896 318.96
+
+
+
+Simulation with multiple line
+
+Average transaction time                       234.38
+Total idle time - Times_idle                    18042 61
+Total time -  Average waiting time              37395 373.95
