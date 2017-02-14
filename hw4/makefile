@@ -14,10 +14,10 @@ qSim: teller.o customer.o event.o simulation.o
 teller.o: teller.cpp teller.h event.h
 	g++ $(CFLAGS) -c teller.cpp
 	
-customer.o: customer.cpp customer.h event.h
+customer.o: customer.cpp customer.h teller.h
 	g++ $(CFLAGS) -c customer.cpp
 	
-simulation.o: simulation.cpp
+simulation.o: simulation.cpp simulation.h teller.h event.h customer.h
 	g++ $(CFLAGS) -c simulation.cpp
 
 event.o: event.cpp event.h
