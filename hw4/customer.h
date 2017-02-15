@@ -20,8 +20,6 @@ public:
 	void Action2();
 	int gettime();
 	Event* add();
-
-
 	virtual ~Customer(){}
 };
 
