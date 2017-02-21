@@ -23,7 +23,7 @@ public:
 	Rational(const int wholeNumber);
 	Rational(const Rational &a) ;
 	friend ostream& operator<<(ostream& out, const Rational& rat);
-	friend istream& operator>>(istream& in,const Rational& rat);
+	friend istream& operator>>(istream& in,Rational& rat);
 	Rational operator+(const Rational &rat);
 	Rational operator-(const Rational &rat);
 	Rational operator*(const Rational &rat);
@@ -34,6 +34,8 @@ public:
 	int operator<(const Rational &rat);
 	int operator>=(const Rational &rat);
 	int operator<=(const Rational &rat);
+	void operator=(Rational &rat);
+	Rational operator+=(Rational &rat);
 	double toDouble(const Rational &rat);
 };
 
