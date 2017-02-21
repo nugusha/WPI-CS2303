@@ -6,7 +6,9 @@
  */
 
 #include <iostream>
+#include <stdio.h>
 #include <algorithm>
+#include <cstdlib>
 #include "Rational.h"
 
 using namespace std;
@@ -55,9 +57,33 @@ ostream& operator<<(ostream& out, const Rational& rat) {
 	out << rat.top << '/' << rat.bot;
 	return out;
 }
-istream& operator>>(istream& in,const Rational& rat) {
-	char c;
-	in >> rat.top >> c >> rat.bot;
+int k=0;
+istream& operator>>(istream& in,Rational& rat) {
+	string s;
+
+	in>>s;
+
+	int ind=s.find('/');
+
+	if(ind==-1){
+		rat.top=atoi(s.c_str());
+		rat.bot=1;
+		return in;
+	}
+
+	int TOP=0,BOT=0;
+
+
+	for(int i=0;i<ind;i++){
+		TOP=TOP*10+s[i]-'0';
+	}
+	for(int i=ind+1;i<int(s.size());i++){
+		BOT=BOT*10+s[i]-'0';
+	}
+	Rational et=normalize(TOP,BOT);
+	rat=et;
+
+
 	return in;
 }
 
@@ -102,18 +128,35 @@ int Rational::operator>=(const Rational &rat) {
 int Rational::operator<=(const Rational &rat) {
 	return ((*this==rat) || (*this<rat));
 }
+void Rational::operator=(Rational &rat){
+	top=rat.top;
+	bot=rat.bot;
+}
+Rational Rational::operator+=(Rational &rat){
+	Rational x=(*this)+rat;
+	top=x.top;
+	bot=x.bot;
+
+	return (*this);
+}
 double Rational::toDouble(const Rational &rat) {
 	return (double)(rat.top)/(double)(rat.bot);
 }
 int main(){
 
-	Rational *v=new Rational(3,5);
-	Rational *j=new Rational(2,3);
-	Rational *jj=new Rational(9,3);
+	Rational v=Rational(3,5),vv;
+	Rational j=Rational(2,3);
+	Rational jj=Rational(9,3);
 
+/*
+			cout<<jj<<" !"<<endl;
+	cout<<v<<" =   "<<j<<"  -  "<<((j)!=(v))<<" <---"<<endl;
 
-			cout<<*jj<<" !"<<endl;
-	cout<<*v<<" "<<*j<<" "<<((*j)!=(*v));
+	cout<<"!"<<endl;*/
+	cin>>vv;
+	cout<<"!"<<endl;
+	vv+=v;
+	cout<<vv<<endl;
 
 
 	return 0;
