@@ -17,7 +17,7 @@ public:
 
 	int top, bot;
 
-	~Rational();
+	~Rational();	// destructor
 	Rational();
 	Rational(const int num, const int denom);
 	Rational(const int wholeNumber);
@@ -36,7 +36,10 @@ public:
 	int operator<=(const Rational &rat);
 	void operator=(Rational &rat);
 	Rational operator+=(Rational &rat);
-	double toDouble(const Rational &rat);
+	Rational operator-=(Rational &rat);
+	Rational operator/=(Rational &rat);
+	Rational operator*=(Rational &rat);
 };
-
+double toDouble(const Rational &rat);
+void solve(string s);
 #endif /* RATIONAL_H_ */
