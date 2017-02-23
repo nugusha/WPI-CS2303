@@ -71,9 +71,9 @@ istream& operator>>(istream& in,Rational& rat) {
 
 	int ind=s.find('/');
 
-	if(ind==-1){
-		rat.top=atoi(s.c_str());
-		rat.bot=1;
+	if(ind==-1){                // if ind==-1 then there is not / in rational number
+		rat.top=atoi(s.c_str());// so we assign the given number to the top
+		rat.bot=1; 				// and 1 to the bot
 		return in;
 	}
 
@@ -297,6 +297,12 @@ int main(int argc, char *argv[]){
 	for(int i = 1; i < argc; i++) {// goes through the args
 		string S;
 		in.open(argv[i]);
+		if(in.is_open()) {
+			cout<<argv[i]<<" was successfully opened."<<endl;
+		}
+		else {
+			cout<<argv[i]<<" was not opened successfully."<<endl;
+		}
 		while(getline(in,S)){// opens each given file
 			solve(S);
 		}
