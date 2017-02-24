@@ -1,0 +1,42 @@
+test1.txt was successfully opened.
+a 1/2 =                    : 1/2 (double 0.500000)
+a 1/4 +=                   : 3/4 (double 0.750000)
+b 1/4 =                    : 1/4 (double 0.250000)
+empty line
+a b +                      : 1/1 (double 1.000000)
+c 1/217 =                  : 1/217 (double 0.004608)
+a b *                      : 3/16 (double 0.187500)
+a b * c /                  : 651/16 (double 40.687500)
+empty line
+a b +=                     : 1/1 (double 1.000000)
+b a -=                     : -3/4 (double -0.750000)
+b 45 /=                    : -1/60 (double -0.016667)
+c a *=                     : 1/217 (double 0.004608)
+a a * b + c - a /          : 12743/13020 (double 0.978725)
+fraction 20/1187 =         : 20/1187 (double 0.016849)
+whole 76 =                 : 76/1 (double 76.000000)
+empty line
+5 += 7                     : error
+empty line
+fraction whole +=          : 90232/1187 (double 76.016849)
+whole fraction -=          : -20/1187 (double -0.016849)
+big 142569797 =            : 142569797/1 (double 142569797.000000)
+big fraction -=            : 1726534263/1187 (double 1454536.026116)
+fraction 13 +=             : 105663/1187 (double 89.016849)
+whole -65 *=               : 1300/1187 (double 1.095198)
+b 0 +                      : -1/60 (double -0.016667)
+whole 0 +                  : 1300/1187 (double 1.095198)
+empty line
+b whole /=                 : -1187/78000 (double -0.015218)
+a b <                      : false
+whole fraction =           : 105663/1187 (double 89.016849)
+whole whole ==             : true
+whole whole !=             : false
+empty line
+whole fraction /=          : 1/1 (double 1.000000)
+a b <=                     : false
+b b >=                     : true
+b 5 =                      : 5/1 (double 5.000000)
+b b +                      : 10/1 (double 10.000000)
+b 1/2 =                    : 1/2 (double 0.500000)
+b b *                      : 1/4 (double 0.250000)
