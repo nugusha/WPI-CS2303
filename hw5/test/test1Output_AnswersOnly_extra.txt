@@ -1,0 +1,42 @@
+test1.txt was successfully opened.
+1/2 (double 0.500000)
+3/4 (double 0.750000)
+1/4 (double 0.250000)
+empty line
+1/1 (double 1.000000)
+1/217 (double 0.004608)
+3/16 (double 0.187500)
+651/16 (double 40.687500)
+empty line
+1/1 (double 1.000000)
+-3/4 (double -0.750000)
+-1/60 (double -0.016667)
+1/217 (double 0.004608)
+12743/13020 (double 0.978725)
+20/1187 (double 0.016849)
+76/1 (double 76.000000)
+empty line
+error
+empty line
+90232/1187 (double 76.016849)
+-20/1187 (double -0.016849)
+142569797/1 (double 142569797.000000)
+1726534263/1187 (double 1454536.026116)
+105663/1187 (double 89.016849)
+1300/1187 (double 1.095198)
+-1/60 (double -0.016667)
+1300/1187 (double 1.095198)
+empty line
+-1187/78000 (double -0.015218)
+false
+105663/1187 (double 89.016849)
+true
+false
+empty line
+1/1 (double 1.000000)
+false
+true
+5/1 (double 5.000000)
+10/1 (double 10.000000)
+1/2 (double 0.500000)
+1/4 (double 0.250000)
