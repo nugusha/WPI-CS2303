@@ -1,0 +1,41 @@
+a 1/2 =
+a 1/4 +=
+b 1/4 =
+
+a b +
+c 1/217 =
+a b *
+a b * c /
+
+a b +=
+b a -=
+b 45 /=
+c a *=
+a a * b + c - a /
+fraction 20/1187 =
+whole 76 =
+
+5 += 7
+
+fraction whole +=
+whole fraction -=
+big 142569797 =
+big fraction -=
+fraction 13 +=
+whole -65 *=
+b 0 +
+whole 0 +
+
+b whole /=
+a b <
+whole fraction =
+whole whole ==
+whole whole !=
+
+whole fraction /=
+a b <=
+b b >=
+b 5 =
+b b +
+b 1/2 =
+b b *
