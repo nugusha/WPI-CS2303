@@ -7,8 +7,10 @@
 
 CFLAGS = -g -Wall
 
+all: PA6
+
 PA6: Organism.o Ant.o Doodlebug.o Simulation.o board.o
-	g++ $(CFLAGS) Simulation.o Organism.o Ant.o Doodlebug.o board.o -o PA6
+	g++ $(CFLAGS) Organism.o Ant.o Doodlebug.o Simulation.o board.o -o PA6
 
 Organism.o: Organism.cpp Organism.h
 	g++ $(CFLAGS) -c Organism.cpp
@@ -27,6 +29,3 @@ Simulation.o: Simulation.cpp
 
 clean:
 	rm -f *.o *.exe PA6
-	
-all: PA6
-	
