@@ -26,7 +26,6 @@ public:
 	pair<int,int> move(Organism*** A, Organism*** B);
 	void breed(Organism*** A, Organism*** B);
 	int time_to_bread();
-
 };
 
 #endif /* ANT_H_ */
