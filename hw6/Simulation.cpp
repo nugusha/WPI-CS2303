@@ -20,8 +20,6 @@ using namespace std;
 
 Organism*** a;
 vector<pair<int,int> >moves;
-//int** fix;
-
 int gridsize, doodlebugs, ants, time_steps, seed, pause;
 
 int main(int argc, char *argv[]) {
@@ -48,12 +46,7 @@ int main(int argc, char *argv[]) {
 	for(int i=0;i<gridsize;i++){								// allocates memory for the grid
 		a[i] = (Organism **)malloc(sizeof(Organism*)*gridsize);
 	}// end allocation
-/*
-	fix = (int **)malloc(sizeof(int*)*gridsize);
-	for(int i=0;i<gridsize;i++){
-		fix[i] = (int *)malloc(sizeof(int)*gridsize);
-	}
-*/
+	
 
 	for(int i=0;i<gridsize;i++)			//goes through rows
 		for(int j=0;j<gridsize;j++){	//goes through columns
@@ -91,13 +84,10 @@ int main(int argc, char *argv[]) {
 	moves.push_back(make_pair(0,1));   // down
 	moves.push_back(make_pair(-1,0));  // left
 
-	//cout<<"!!!"<<endl;
+	
 	printStep(gridsize, a);
-//	cout<<"!!"<<endl;
-
+	
 	playOne(gridsize,  a, time_steps);
-
-
 
 	return 0;
 }
