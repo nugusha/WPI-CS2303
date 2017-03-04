@@ -16,15 +16,12 @@
 #include "Organism.h"
 
 using namespace std;
-
-//extern int gridsize;
 extern vector<pair<int,int> >moves;
 
 Ant::Ant(int X,int Y) {
 	x=X;
 	y=Y;
 }// end Ant
-
 void Ant::print(){
 	cout<<"o";
 	return;
@@ -51,8 +48,6 @@ pair<int,int> Ant::move(Organism*** curBoard, Organism*** newBoard){
 				return make_pair(x,y);
 			}
 		}
-
-
 	return make_pair(-1,-1);
 }// end move
 Organism* Ant::getnew(){
@@ -80,8 +75,6 @@ void Ant::breed(Organism*** curBoard, Organism*** newBoard){
 				return ;
 			}
 		}
-
-
 
 	return;
 }// end breed
