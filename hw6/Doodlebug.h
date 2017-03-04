@@ -19,7 +19,6 @@ public:
 	Doodlebug(int X,int Y);
 	virtual ~Doodlebug(){}
 
-
 	int type();
 	void print();
 	pair<int,int> move(Organism*** curBoard, Organism*** newBoard);
