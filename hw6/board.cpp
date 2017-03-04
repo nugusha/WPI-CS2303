@@ -34,10 +34,7 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 	int rows,cols;
 	rows=cols=gridsize;
 
-	//cout<<time_steps<<" "<<count<<endl;
-
 	Organism ***newBoard = (Organism ***)malloc(sizeof(Organism**)*gridsize);
-
 
 	if(time_steps == 0) {
 		return;
@@ -46,8 +43,6 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 	for(int i = 0; i < rows; i++) {
 		newBoard[i] = (Organism**)malloc(cols * sizeof(Organism*));
 	}
-
-
 
 	for(int i = 0; i < rows; i++) {
 		for(int j = 0; j < cols; j++) {
@@ -74,10 +69,8 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 					newBoard[i][j]=curBoard[i][j]->getnew();
 					newBoard[i][j]->timer++;
 				}
-
 			}
 		}
-
 
 	for(int i=0;i<gridsize;i++)
 		for(int j=0;j<gridsize;j++){
@@ -93,8 +86,6 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 			}
 		}
 
-
-
 	for(int i=0;i<gridsize;i++)
 		for(int j=0;j<gridsize;j++){
 			if(newBoard[i][j]->type()==0)continue;
@@ -106,7 +97,6 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 			}
 		}
 
-//cout<<"!!!!"<<endl;
 
 	int er3 = 0;
 
@@ -114,9 +104,6 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 		for(int j=0;j<gridsize;j++){
 			if(newBoard[i][j]==NULL)newBoard[i][j]=new Organism();
 		}
-
-
-
 
 	for(int i = 0; i < rows; i++) {
 		for(int j = 0; j < cols; j++) {
@@ -126,35 +113,20 @@ void playOne(int gridsize, Organism*** curBoard, int time_steps,int count=1) {
 		}
 	}
 
-
 	printStep(gridsize, newBoard);
 
-
-
 	if(!er3) {
-	//	cout<<er1<<" "<<er2<<" "<<er3<<" !"<<endl;
 		exit(0);
 	}
-
-
-
-
-
-
 
 	if(pause!=0 && count%pause==0) {
 		getchar();
 	}
 
-
-
 		for(int i = 0; i < rows; i++) {
 			free(curBoard[i]);
 		}
-
 		free(curBoard);
 
-
-//	cout<<time_steps<<endl;
 	playOne(gridsize, newBoard, time_steps - 1,count+1);
 }
