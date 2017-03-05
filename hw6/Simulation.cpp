@@ -43,14 +43,14 @@ int main(int argc, char *argv[]) {
 	srand(seed);
 
 	a = (Organism ***)malloc(sizeof(Organism**)*gridsize);
-	for(int i=0;i<gridsize;i++){								// allocates memory for the grid
+	for(int i=0;i<gridsize;i++){			// allocates memory for the grid
 		a[i] = (Organism **)malloc(sizeof(Organism*)*gridsize);
 	}// end allocation
 	
 
-	for(int i=0;i<gridsize;i++)			//goes through rows
+	for(int i=0;i<gridsize;i++)		//goes through rows
 		for(int j=0;j<gridsize;j++){	//goes through columns
-			a[i][j]=NULL;				// makes the spot empty, in this case NULL
+			a[i][j]=NULL;		// makes the spot empty, in this case NULL
 		}// end NULL placements
 
 	int ANTS=ants;
@@ -74,9 +74,9 @@ int main(int argc, char *argv[]) {
 	}// end doodlebug placement
 
 
-	for(int i=0;i<gridsize;i++)		// goes through rows
+	for(int i=0;i<gridsize;i++)	// goes through rows
 		for(int j=0;j<gridsize;j++){// goes through cols
-			if(a[i][j]==NULL)a[i][j]=new Organism();	// replaces NULL spots with new Organisms
+			if(a[i][j]==NULL)a[i][j]=new Organism();// replaces NULL spots with new Organisms
 		}// ned NULL replacement
 
 	moves.push_back(make_pair(0,-1));  // up
@@ -84,7 +84,6 @@ int main(int argc, char *argv[]) {
 	moves.push_back(make_pair(0,1));   // down
 	moves.push_back(make_pair(-1,0));  // left
 
-	
 	printStep(gridsize, a);
 	
 	playOne(gridsize,  a, time_steps);
